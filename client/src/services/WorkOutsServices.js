@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { response } from 'express'
-const bas_url = '/api/WorkOuts'
+
+const base_url = '/api/WorkOuts'
 
 export default {
     getAllWorkOuts() {
@@ -10,7 +10,7 @@ export default {
         })
     },
 
-    addWorkOut(WorkOuts) {
+    addWorkOuts(WorkOuts) {
         return axios.post(base_url, WorkOuts).then(response => {
             
             return response.data

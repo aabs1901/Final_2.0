@@ -13,9 +13,10 @@ router.get('/WorkOuts', function(req, res, next){
 })
 
 router.post('/WorkOuts', function (req, res, next){
+    console.log(req.body)
     Workout.create(req.body).then( (data) => {
-        return res.status(404).send('ok')
-    }).catcj( err => {
+        return res.status(201).send('ok')
+    }).catch( err => {
         if (err instanceof Sequelize.ValidationError){
             let message = err.errors.map( e => e.message )
             // 400 = bad request from user 
