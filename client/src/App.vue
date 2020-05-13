@@ -32,10 +32,18 @@ export default {
   },
     methods: {
     NewWorkOutAdded(WorkOut) {
-      this.WorkOuts.push(WorkOut)
+      this.$WorkOuts_api.addWorkOuts(WorkOut).then( WorkOut => {
+        this.updateWorkOuts()
+
+      }).catch(err => {
+        let msg = err.response.data.join(',')
+        alert('Error adding WorkOuts.\n' + msg)
+      })
+
+     // this.WorkOuts.push(WorkOut)
    /* this is were the name of the workout and the amount of times they did it */
-    let labels = this.WorkOuts.map( w => w.type )  // but you need to put data from this.Workouts in this array
-    let data = this.WorkOuts.map(w => w.reps)    // and the numbers go in in this array
+    let labels = this.WorkOuts.map( w => w.type )  // this is the name of the work out
+    let data = this.WorkOuts.map(w => w.reps)    // this is the numberof reps they did the work out
   
   this.WorkOutsChartData = {
     labels: labels,
@@ -46,15 +54,17 @@ export default {
      
   }
 
-  
-
       },
       loadWorkOutData(){
         this.WorkOuts = work 
         let lables = this.WorkOuts.map(work => work.when)
       }
     
-    
+  },
+  updateWorkOuts(){
+    this.$WorkOuts_api.getAllWorkOuts().then (students => {
+      this.WorkOuts = WorkOuts
+    })
   }
 }
 

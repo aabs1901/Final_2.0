@@ -12,8 +12,8 @@ if (config.use_env_variable) {
     sequelize = new Sequelize(config)
 }
 
-const model =sequelize['import']['./WorkOuts.js']
-db[model.type] = model 
+const model =sequelize['import']('./WorkOuts.js')
+db[model.name] = model 
 
 db.sequelize =sequelize
 db.Sequelize = Sequelize
