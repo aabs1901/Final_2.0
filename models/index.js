@@ -13,7 +13,7 @@ if (config.use_env_variable) {
 }
 
 const model =sequelize['import']['./WorkOuts.js']
-db[module.type] = model 
+db[model.type] = model 
 
 db.sequelize =sequelize
 db.Sequelize = Sequelize
