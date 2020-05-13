@@ -1,6 +1,6 @@
 let Sequelize = require('sequelize') 
 
-let env =process.env.NODE_ENV || 'development'
+let env = process.env.NODE_ENV || 'development'
 let config = require(__dirname + '/../config.json')[env]
 
 let db= {}
@@ -15,7 +15,7 @@ if (config.use_env_variable) {
 const model =sequelize['import']['./WorkOuts.js']
 db[module.type] = model 
 
-db.sequelize =sequelize;
-db.Sequelize = Sequelize;
+db.sequelize =sequelize
+db.Sequelize = Sequelize
 
-module.exports =db;
+module.exports =db

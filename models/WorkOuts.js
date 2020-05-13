@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
 
      })
      WorkOuts.sync({ force: true }).then(  () =>{
-         Console.log('Synced student table')
+         console.log('Synced student table')
      })
      return WorkOuts
 }
