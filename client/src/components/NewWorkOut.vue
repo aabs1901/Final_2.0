@@ -99,7 +99,7 @@ data() {
 methods: {
    addWorkOut(){
     this.errors=[]
-     let WorkOut= { when:this.whenLocal, howLong: this.howLong,
+     let WorkOut= { when:this.when, howLong: this.howLong,
        type: this.type, Weightbodyweight: this.Weightbodyweight,
        reps: this.reps, sets: this.sets, note: this.note }
 
@@ -129,7 +129,7 @@ this.when=''
 
 }
 if (this.errors.length ==0) {
-       let NewActivityRecord = { when:this.whenLocal, howLong: this.howLong,
+       let NewActivityRecord = { when:this.when, howLong: this.howLong,
        type: this.type, Weightbodyweight: this.Weightbodyweight,
        reps: this.reps, sets: this.sets, note: this.note }
 

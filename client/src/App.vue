@@ -34,13 +34,14 @@ export default {
     NewWorkOutAdded(WorkOut) {
       this.$WorkOuts_api.addWorkOuts(WorkOut).then( WorkOut => {
         this.updateWorkOuts()
+        this.WorkOuts.push(WorkOut)
 
       }).catch(err => {
         let msg = err.response.data.join(',')
         alert('Error adding WorkOuts.\n' + msg)
       })
 
-     // this.WorkOuts.push(WorkOut)
+     this.WorkOuts.push(WorkOut)
    /* this is were the name of the workout and the amount of times they did it */
     let labels = this.WorkOuts.map( w => w.type )  // this is the name of the work out
     let data = this.WorkOuts.map(w => w.reps)    // this is the numberof reps they did the work out
