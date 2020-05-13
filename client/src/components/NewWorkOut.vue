@@ -104,10 +104,12 @@ methods: {
        reps: this.reps, sets: this.sets, note: this.note }
 
 
+     if (!this.when){
+         this.errors.push('Data Required')
+     }
 
 
-
-this.when=''
+this.when
 
     if (typeof (this.howLong) !="number" || this.howLong <=0) {
         this.errors.push('The number of hours must be greater than zero')

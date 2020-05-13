@@ -45,12 +45,18 @@ export default {
    /* this is were the name of the workout and the amount of times they did it */
     let labels = this.WorkOuts.map( w => w.type )  // this is the name of the work out
     let data = this.WorkOuts.map(w => w.reps)    // this is the numberof reps they did the work out
-  
+    let colors = ['rgb(158, 179, 194)', 'rgb(28,114,147)', '  rgb(2, 133, 145)' , 'rgb(68, 94, 116)', 'rgb(18, 58, 90)']
+    let colorb = ['rgb(28,114,110', 'rgb(28,114,110', 'rgb(28,114,110','rgb(28,114,110','rgb(28,114,110','rgb(28,114,110','rgb(28,114,110','rgb(28,114,110']
+   
   this.WorkOutsChartData = {
     labels: labels,
     datasets: [{
       label: "Workout",
-      data: data
+      data: data,
+      backgroundColor : colors,
+      hoverBackgroundColor :colorb,
+    
+
     }]
      
   }

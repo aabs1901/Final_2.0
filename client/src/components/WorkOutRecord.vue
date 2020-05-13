@@ -62,8 +62,7 @@ export default {
 
 
 .card-header{
-    background-color: rgb(28,114,147);
-   
+    background-color:rgb(158, 179, 194);
    
 }
 
