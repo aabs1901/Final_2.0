@@ -1,5 +1,5 @@
 <script>    
-
+// The Chart.js formate was provide by James, Clara L
 import {Bar, mixins} from 'vue-chartjs'
 const { reactiveProp} = mixins 
 

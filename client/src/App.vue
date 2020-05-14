@@ -30,6 +30,7 @@ export default {
     WorkOutRecord,
     WorkOutSummary
   },
+  //Most of the work below I got help from James, Clara L
     methods: {
     NewWorkOutAdded(WorkOut) {
       this.$WorkOuts_api.addWorkOuts(WorkOut).then( WorkOut => {

@@ -1,6 +1,6 @@
 <template>
     <div>
-
+<!--this was orginal from one of our laps -->
 
         <h1 class="text-center">{{activity}}</h1>
         <div class="card-body">

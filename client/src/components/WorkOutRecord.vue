@@ -1,4 +1,5 @@
 <template>
+<!--this was orginal from one of our laps -->
     <div>
     <div class="card">
         <h2 class="card-body">Activity Record</h2>
